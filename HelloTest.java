@@ -10,6 +10,7 @@ import static org.junit.Assert.*;
 public class HelloTest
 {
 
+    private static final String line_ending = System.lineSeparator();
     private PrintStream std_out;
     private ByteArrayOutputStream mock_out;
 
@@ -33,7 +34,7 @@ public class HelloTest
         for(int i=0; i<count; i++)
         {
             builder.append(message);
-            builder.append('\n');
+            builder.append(line_ending);
         }
         return builder.toString();
     }
